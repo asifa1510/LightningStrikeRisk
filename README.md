@@ -7,9 +7,9 @@ A real-time flight tracking and risk-aware route optimization system that predic
 ## 💡 Why This Project?
 
 Traditional flight monitoring systems rely heavily on radar and static ATC infrastructure. These systems:
-- ❌ Lack real-time lightning risk prediction
-- ❌ Cannot proactively reroute based on evolving weather
-- ❌ Offer limited decision-making support for pilots and ATCs
+- Lack real-time lightning risk prediction
+- Cannot proactively reroute based on evolving weather
+- Offer limited decision-making support for pilots and ATCs
 
 **This project solves these limitations** by integrating:
 - 🔁 Real-time data (via OpenSky API)
