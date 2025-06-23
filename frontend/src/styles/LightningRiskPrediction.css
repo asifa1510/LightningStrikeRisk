@@ -1,0 +1,61 @@
+.risk-analysis-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.risk-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.risk-meter {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.risk-low {
+  background-color: #28a745;
+  color: white;
+}
+
+.risk-moderate {
+  background-color: #ffc107;
+  color: black;
+}
+
+.risk-high {
+  background-color: #dc3545;
+  color: white;
+}
+
+.historical-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.historical-data {
+  list-style: none;
+  padding: 0;
+}
+
+.historical-data li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
