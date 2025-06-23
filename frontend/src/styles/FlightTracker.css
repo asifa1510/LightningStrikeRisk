@@ -1,0 +1,41 @@
+.risk-analysis-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.border {
+  border: 1px solid #ccc;
+}
+
+.rounded-md {
+  border-radius: 6px;
+}
+
+.shadow-md {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.text-lg {
+  font-size: 18px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-gray-800 {
+  color: #333;
+}
