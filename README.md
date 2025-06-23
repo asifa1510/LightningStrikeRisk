@@ -1,66 +1,66 @@
 # ⚡ Lightning Strike Risk Prediction for Aviation Safety
 
-A machine learning-based system to predict lightning strike risks in flight paths using real-time weather and telemetry data. The system aims to enhance aviation safety by proactively identifying high-risk zones and enabling safe flight rerouting.
+A real-time flight tracking and risk-aware route optimization system that predicts lightning strike risk using hybrid deep learning and reinforcement learning. Built with Bi-LSTM, Gaussian Process Regression, and PPO-based path reoptimization, this system enhances aviation safety by dynamically analyzing lightning hazards and rerouting aircraft safely.
 
 ---
 
-## 💡 Motivation
+## 💡 Why This Project?
 
-Lightning strikes pose a significant threat to aviation, affecting:
-- ✈️ Aircraft avionics and control systems
-- 🛰️ Communication and radar equipment
-- ⚙️ Engine performance and pilot visibility
+Traditional flight monitoring systems rely heavily on radar and static ATC infrastructure. These systems:
+- ❌ Lack real-time lightning risk prediction
+- ❌ Cannot proactively reroute based on evolving weather
+- ❌ Offer limited decision-making support for pilots and ATCs
 
-However, current systems often **lack real-time lightning prediction** and **route-aware risk assessment**, especially over dynamic weather regions.
-
-This project bridges that gap with a deep learning system that:
-- Predicts lightning risk with high accuracy
-- Analyzes the impact on different flight segments
-- Suggests **safer alternate routes** using lightning-aware pathfinding
+**This project solves these limitations** by integrating:
+- 🔁 Real-time data (via OpenSky API)
+- 🧠 Deep Learning for lightning risk forecasting
+- 🧭 Reinforcement Learning for flight path optimization
+- 🗺️ GIS visualization with Leaflet.js
 
 ---
 
-## 📚 Dataset Overview
+## 📚 Datasets Used
 
-The model is trained on a combination of real and simulated flight + weather data:
+The model is trained on real + simulated data combining aircraft telemetry and meteorological variables.
 
-| Component | Description |
-|----------|-------------|
-| **Flight Data** | Flight paths, altitude, speed, heading, and location |
-| **Weather Data** | Real-time temperature, humidity, wind speed, cloud cover, and pressure |
-| **Lightning Labels** | Risk annotated based on NOAA storm data and observed strike patterns |
-
-### ⚠️ Risk Classes:
-- `0` — Safe
-- `1` — Moderate Lightning Risk
-- `2` — High Lightning Strike Risk
+| Feature | Description |
+|--------|-------------|
+| `Latitude` / `Longitude` | Flight coordinates |
+| `Velocity` | Aircraft speed (150–600 knots) |
+| `Heading` | Direction (0°–360°) |
+| `Altitude` | Cruise level (10,000–40,000 ft) |
+| `WindSpeed` | Wind impact at location |
+| `TurbulenceIndex` | Simulated turbulence severity (0.0–1.0) |
+| `LightningProb` | Lightning strike probability (0.0–1.0) |
+| `Temperature` | Ambient air temperature (−60°C to 40°C) |
+| `Pressure` | Atmospheric pressure (500–1100 hPa) |
+| `Risk` | Target label: `0` (no risk), `1` (risk) |
 
 ---
 
 ## 🧠 Model Architecture
 
-### 🔁 BiLSTM-GPR Hybrid
+### 🔗 Hybrid Temporal Risk Prediction Model (HTRPM)
+- **BiLSTM**: Temporal modeling of flight & weather sequence data
+- **GPR (Gaussian Process Regression)**: Adds uncertainty estimation
+- **VAE (Variational Autoencoder)**: For latent representation learning
 
-| Component | Description |
-|-----------|-------------|
-| **BiLSTM** | Captures temporal dependencies from flight telemetry |
-| **GPR (Gaussian Process Regression)** | Calibrates uncertainty and provides smooth probabilistic outputs |
-| **AUC** | Achieved AUC of `1.00` and accuracy of `93.35%` on test data
-
----
-
-## 🌩️ Features Used
-
-- Wind speed, humidity, air pressure
-- Cloud cover, altitude, vertical velocity
-- Geographic coordinates (lat, long)
-- Time of day, temperature deviation
+Risk is calculated as:  
+`R = αT + βWS + γP + δL + ηTI`  
+where coefficients are learned weights for key features.
 
 ---
 
-## 🛠️ How to Run the Project
+## 🛠️ Flight Path Optimization
 
-### ✅ 1. Clone the Repo
-```bash
-git clone https://github.com/your-username/LightningRiskAI.git
-cd LightningRiskAI
+### 🔄 Proximal Policy Optimization (PPO)
+A reinforcement learning agent is trained to choose safe detours by:
+- Penalizing high-risk regions
+- Minimizing fuel consumption
+- Reducing geodesic distance
+- Using lightning-aware reward functions
+
+The PPO policy considers:
+```text
+State: [Latitude, Longitude, Velocity, Predicted Risk]
+Action: [ΔLatitude, ΔLongitude]
