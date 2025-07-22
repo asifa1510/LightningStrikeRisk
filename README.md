@@ -1,10 +1,10 @@
-# ⚡ Lightning Strike Risk Prediction for Aviation Safety
+⚡**Lightning Strike Risk Prediction for Aviation Safety**
 
 A real-time flight tracking and risk-aware route optimization system that predicts lightning strike risk using hybrid deep learning and reinforcement learning. Built with Bi-LSTM, Gaussian Process Regression, and PPO-based path reoptimization, this system enhances aviation safety by dynamically analyzing lightning hazards and rerouting aircraft safely.
 
 ---
 
-## 💡 Why This Project?
+**💡 Why This Project?**
 
 Traditional flight monitoring systems rely heavily on radar and static ATC infrastructure. These systems:
 - Lack real-time lightning risk prediction
@@ -19,7 +19,7 @@ Traditional flight monitoring systems rely heavily on radar and static ATC infra
 
 ---
 
-## 📚 Datasets Used
+**📚 Datasets Used**
 
 The model is trained on real + simulated data combining aircraft telemetry and meteorological variables.
 
@@ -38,12 +38,12 @@ The model is trained on real + simulated data combining aircraft telemetry and m
 
 ---
 
-## 🧠 Model Architecture
+**🧠 Model Architecture**
 
-### 🔗 Hybrid Temporal Risk Prediction Model (HTRPM)
-- **BiLSTM**: Temporal modeling of flight & weather sequence data
-- **GPR (Gaussian Process Regression)**: Adds uncertainty estimation
-- **VAE (Variational Autoencoder)**: For latent representation learning
+**🔗 Hybrid Temporal Risk Prediction Model (HTRPM)**
+- *BiLSTM*: Temporal modeling of flight & weather sequence data
+- *GPR (Gaussian Process Regression)*: Adds uncertainty estimation
+- *VAE (Variational Autoencoder)*: For latent representation learning
 
 Risk is calculated as:  
 `R = αT + βWS + γP + δL + ηTI`  
@@ -51,9 +51,9 @@ where coefficients are learned weights for key features.
 
 ---
 
-## 🛠️ Flight Path Optimization
+**🛠️ Flight Path Optimization**
 
-### 🔄 Proximal Policy Optimization (PPO)
+*🔄 Proximal Policy Optimization (PPO)*
 A reinforcement learning agent is trained to choose safe detours by:
 - Penalizing high-risk regions
 - Minimizing fuel consumption
