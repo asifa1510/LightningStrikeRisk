@@ -11,7 +11,15 @@ BEST PAPER AWARD IN 2025 **1st International Conference on Radio Frequency Commu
 
 
 
----
+
+
+
+
+-
+
+
+
+
 A real-time flight tracking and risk-aware route optimization system that predicts lightning strike risk using hybrid deep learning and reinforcement learning. Built with Bi-LSTM, Gaussian Process Regression, and PPO-based path reoptimization, this system enhances aviation safety by dynamically analyzing lightning hazards and rerouting aircraft safely.
 
 ---
