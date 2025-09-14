@@ -1,23 +1,12 @@
 ⚡**Lightning Strike Risk Prediction for Aviation Safety**
 
-### 🏆 Best Paper Award 🏆
+**BEST PAPER AWARD:** Our work was recognized at the **1st International Conference on Radio Frequency Communication and Networks (RFCoN)** in 2025.
 
-Our publication has been honored with the Best Paper Award at the **1st International Conference on Radio Frequency Communication and Networks (RFCoN)** in 2025.
-
-**Read the full paper here:**
-[**Title of the Paper**](https://ieeexplore.ieee.org/document/11085355)
+Read our paper: [https://ieeexplore.ieee.org/document/11085355](https://ieeexplore.ieee.org/document/11085355)
 
 
 
-
-
-
-
-
-
-
-
-
+---
 
 
 A real-time flight tracking and risk-aware route optimization system that predicts lightning strike risk using hybrid deep learning and reinforcement learning. Built with Bi-LSTM, Gaussian Process Regression, and PPO-based path reoptimization, this system enhances aviation safety by dynamically analyzing lightning hazards and rerouting aircraft safely.
