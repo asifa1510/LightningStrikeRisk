@@ -1,11 +1,11 @@
 ⚡**Lightning Strike Risk Prediction for Aviation Safety**
 
-publication:
+### 🏆 Best Paper Award 🏆
 
-https://ieeexplore.ieee.org/document/11085355 
+Our publication has been honored with the Best Paper Award at the **1st International Conference on Radio Frequency Communication and Networks (RFCoN)** in 2025.
 
-BEST PAPER AWARD IN 2025 **1st International Conference on Radio Frequency Communication and Networks (RFCoN)**
-
+**Read the full paper here:**
+[**Title of the Paper**](https://ieeexplore.ieee.org/document/11085355)
 
 
 
