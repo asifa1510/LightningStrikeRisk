@@ -1,0 +1,78 @@
+/*LightningRiskPrediction.css*/
+.risk-analysis-container {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 20px auto;
+    font-size: 25px;
+  }
+  
+  .risk-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .risk-meter {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .risk-low {
+    background-color: green;
+  }
+  
+  .risk-moderate {
+    background-color: orange;
+  }
+  
+  .risk-high {
+    background-color: red;
+    animation: blink 0.5s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+  }
+  
+  .historical-header {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .historical-data {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .historical-data li {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

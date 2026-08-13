@@ -1,0 +1,15 @@
+flask
+flask-cors
+numpy
+scikit-learn
+pandas
+pydantic
+python-dotenv
+pymoo==0.6.1.1   # optional; comment out if you don't want Pareto planning
+tensorflow>=2.14
+scikit-learn
+gpflow==2.9.1  # or gpytorch if you prefer PyTorch; pick one
+joblib
+shap
+stable-baselines3==2.3.2
+gymnasium==0.29.1
