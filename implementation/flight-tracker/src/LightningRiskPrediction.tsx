@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./LightningRiskPrediction.css";
 
-const BACKEND_URL = "http://127.0.0.1:5000"; // ✅ Flask backend
+const BACKEND_URL = "http://127.0.0.1:5000"; //Flask
 
 const LightningRiskPrediction: React.FC = () => {
   const location = useLocation();
